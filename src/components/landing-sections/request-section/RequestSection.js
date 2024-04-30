@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import styles from './RequestSection.module.css'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
@@ -6,6 +8,8 @@ import React from 'react'
 import Form from '@/components/sharable/form/Form'
 import telegram from '../../../assets/icons/telegram.svg'
 import mail from '../../../assets/icons/mail.svg'
+import agreement from '../../../assets/icons/agreement.svg'
+import Link from 'next/link'
 
 const RequestSection = () => {
     const { t } = useTranslation()
@@ -48,6 +52,18 @@ const RequestSection = () => {
                                             support@jetton.partners
                                         </span>
                                     </a>
+                                </li>
+                                <li>
+
+                                    <a
+                                        className={styles.item}
+                                         href="/agreement"
+                                    >
+                                         <Image src={agreement} alt="agreement" />
+                                        <span className={styles.contacts}>
+                                            Affiliate Program Agreement
+                                        </span>
+                                     </a>
                                 </li>
                             </ul>
                         </div>
